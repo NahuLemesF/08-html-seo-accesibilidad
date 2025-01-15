@@ -24,74 +24,73 @@
   <meta name="twitter:card" content="app">
   <title>Winamp</title>
   <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./src/style.scss">
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <menu>
-        <li>
-          <a href="#" aria-label="Go to home">
-            <i aria-hidden="true">
-              <img src="./images/logo.svg" alt="Winamp Logo">
+  <main>
+    <section class="section">
+
+      <header class="header">
+        <nav>
+          <menu class="menu">
+            <li class="menu__item">
+              <a href="#" aria-label="Go to home">
+                <i aria-hidden="true">
+                  <img src="./images/logo.avif" alt="Winamp Logo" width="113px">
+                </i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" aria-label="Go to Player">
+                Player
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" aria-label="Go to Creators">
+                Creators
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" aria-label="Go to Learn">
+                Learn
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" aria-label="Go to Press">
+                Press
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" aria-label="Go to Jobs">
+                Jobs
+              </a>
+            </li>
+          </menu>
+
+
+        </nav>
+
+        <div class="header__actions">
+          <a href="#" class="header__link">For Creators</a>
+          <a href="#" class="header__button">Contact us</a>
+          <a href="#">
+            <i>
+              <img src="./images/world-icon.svg" alt="#">
+            </i>
+            <i>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="10" height="10">
+                <path d="M 2 4.5 L 6 8.5 L 10 4.5" fill="none"
+                  stroke="var(--token-418da828-2706-4a03-8278-b089c280c66c, rgb(113, 113, 122))" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </i>
           </a>
-        </li>
-        <li>
-          <a href="#" aria-label="Go to Player">
-            Player
-          </a>
-        </li>
-        <li>
-          <a href="#" aria-label="Go to Creators">
-            Creators
-          </a>
-        </li>
-        <li>
-          <a href="#" aria-label="Go to Learn">
-            Learn
-          </a>
-        </li>
-        <li>
-          <a href="#" aria-label="Go to Press">
-            Press
-          </a>
-        </li>
-        <li>
-          <a href="#" aria-label="Go to Jobs">
-            Jobs
-          </a>
-        </li>
-      </menu>
-    </nav>
+        </div>
 
-    <div>
-      <a href="#">For Creators</a>
-      <a href="#">Contact</a>
-      <a href="#">
-        <i>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="16" height="16"
-            fill="var(--token-418da828-2706-4a03-8278-b089c280c66c, rgb(113, 113, 122))">
-            <path
-              d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm87.63,96H175.8c-1.41-28.46-10.27-55.47-25.12-77A88.2,88.2,0,0,1,215.63,120ZM128,215.89c-18.73-20.27-30.09-49-31.77-79.89h63.54C158.09,166.87,146.73,195.62,128,215.89ZM96.23,120c1.68-30.87,13-59.62,31.77-79.89,18.73,20.27,30.09,49,31.77,79.89Zm9.09-77C90.47,64.53,81.61,91.54,80.2,120H40.37A88.2,88.2,0,0,1,105.32,43ZM40.37,136H80.2c1.41,28.46,10.27,55.47,25.12,77A88.2,88.2,0,0,1,40.37,136Zm110.31,77c14.85-21.56,23.71-48.57,25.12-77h39.83A88.2,88.2,0,0,1,150.68,213Z">
-            </path>
-          </svg>
-        </i>
-        <i>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="10" height="10">
-            <path d="M 2 4.5 L 6 8.5 L 10 4.5" fill="none"
-              stroke="var(--token-418da828-2706-4a03-8278-b089c280c66c, rgb(113, 113, 122))" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </i>
-      </a>
-    </div>
-  </header>
+      </header>
 
-  <main>
-    <section>
       <div>
         <div>
           <h1>What's next?</h1>
@@ -112,10 +111,10 @@
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <div>
         <video src="https://framerusercontent.com/assets/yl3uahq7ulGBowMCBBFJz4X4b3U.mp4" autoplay muted loop
-          playsinline></video>
+          playsinline width="90%"></video>
       </div>
       <div>
         <h1>Winamp Player</h1>
@@ -157,9 +156,9 @@
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <div>
-        <video src="./images/macbook-video.mp4" autoplay muted loop playsinline></video>
+        <video src="./images/macbook-video.mp4" autoplay muted loop playsinline width="90%"></video>
       </div>
       <div>
         <div>
@@ -174,90 +173,95 @@
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <div>
         <div>
-          <video src="./images/rec-studio.mp4" loop></video>
+          <video src="./images/rec-studio.mp4" loop width="45%"></video>
           <h2>Learn more about the music industry</h2>
         </div>
         <div>
-          <video src="./images/hi-five-video.mp4" loop></video>
+          <video src="./images/hi-five-video.mp4" loop width="45%"></video>
           <h2>Have any question for the llamas or some ass whippin'feedback</h2>
         </div>
       </div>
-
-      <footer>
-        <div>
-          <h3>Winamp</h3>
-          <p>&copy; 2024 Winamp</p>
-        </div>
-        <div>
-          <h4>Helpful links</h4>
-          <menu>
-            <li><a href="#">Llama Group</a></li>
-            <li><a href="#">For Creators</a></li>
-            <li><a href="#">Learn</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Contact</a></li>
-          </menu>
-        </div>
-        <div>
-          <h4>Legal</h4>
-          <menu>
-            <li><a href="#">Legal Notice</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">General Terms of Use</a></li>
-          </menu>
-        </div>
-        <div>
-          <h4>The app</h4>
-          <menu>
-            <li>
-              <a href="#">
-                <i>
-                  <img src="./images/download-iphone-btn.avif" alt="#">
-                </i>
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <i>
-                  <img src="./images/download-google-btn.avif" alt="#">
-                </i>
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <i>
-                  <img src="./images/download-legacy-btn.avif" alt="#">
-                </i>
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <i>
-                  <img src="./images/download-dev-btn.png" alt="#">
-                </i>
-              </a>
-            </li>
-
-          </menu>
-        </div>
-        <div>
-          <h4>Follow us</h4>
-          <menu>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">YouTube</a></li>
-            <li><a href="#">LinkedIn</a></li>
-          </menu>
-        </div>
-      </footer>
     </section>
+
+
+    <footer>
+      <div>
+        <a href="#" aria-label="Go to home">
+          <i aria-hidden="true">
+            <img src="./images/logo.svg" alt="Winamp Logo">
+          </i>
+        </a>
+        <p>&copy; 2024 Winamp</p>
+      </div>
+      <div>
+        <h4>Helpful links</h4>
+        <menu>
+          <li><a href="#">Llama Group</a></li>
+          <li><a href="#">For Creators</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Contact</a></li>
+        </menu>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <menu>
+          <li><a href="#">Legal Notice</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">General Terms of Use</a></li>
+        </menu>
+      </div>
+      <div>
+        <h4>The app</h4>
+        <menu>
+          <li>
+            <a href="#">
+              <i>
+                <img src="./images/download-iphone-btn.avif" alt="#">
+              </i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i>
+                <img src="./images/download-google-btn.avif" alt="#">
+              </i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i>
+                <img src="./images/download-legacy-btn.avif" alt="#">
+              </i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i>
+                <img src="./images/download-dev-btn.png" alt="#">
+              </i>
+            </a>
+          </li>
+
+        </menu>
+      </div>
+      <div>
+        <h4>Follow us</h4>
+        <menu>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </menu>
+      </div>
+    </footer>
   </main>
 
 </body>

@@ -1,0 +1,55 @@
+@use './reset.scss';
+@use './variables.scss' as variables;
+
+.header{
+    @include variables.container(space-between);
+    padding: 20px;
+    width: 1440px;
+    margin: 0 auto;
+
+    &__actions {
+        @include variables.container-gap(20px);
+    }
+
+    &__link {
+        text-decoration: none;
+        color: variables.$gray;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    &__button {
+        background-color: #f4f4f5;
+        color: black;
+        padding: 6px 16px;
+        border-radius: 5px;
+        font-size: 13px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+}
+  
+.menu {
+    display: flex; 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    gap: 45px;
+
+    &__item {
+      a {
+        text-decoration: none;
+        color: variables.$gray;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+        &:hover {
+            a {
+            color: black;
+            }
+        }
+    }
+
+
+}
