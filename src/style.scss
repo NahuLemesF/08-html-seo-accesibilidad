@@ -1,6 +1,10 @@
 @use './reset.scss';
 @use './variables.scss' as variables;
 
+.handle-scroll {
+    height: 100vh;
+}
+
 .header{
     @include variables.container(space-between);
     padding: 20px;
@@ -53,3 +57,72 @@
 
 
 }
+
+.hero {
+    width: 1440px;
+    padding: 20px;
+    margin: 0 auto;
+
+
+    &__content {
+        @include variables.container();
+
+        div {
+            flex: 1;
+        }
+    }
+
+    &__title {
+        font-size: 68px;
+        font-weight: 700;
+        color: black;
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 500;
+        color: variables.$gray;
+        margin-bottom: 40px;
+        text-wrap: balance;
+    }
+
+    &__image {
+        flex: 1;
+        max-width: 550px;
+    }
+
+    &__scroll {
+        @include variables.container-gap(5px);
+        justify-content: center;
+        margin-bottom: 40px;
+
+        div {
+            @include variables.container();
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+        }
+
+        small {
+            font-size: 13px;
+            font-weight: 500;
+            color: variables.$gray;
+        }
+    }
+}
+
+
+
+.shake-vertical {
+    animation: shake-vertical 1.0s ease-in-out infinite; 
+  }
+  
+  @keyframes shake-vertical {
+    0%, 100% {
+      transform: translateY(0); 
+    }
+    50% {
+      transform: translateY(-4px); 
+    }
+  }
+  
