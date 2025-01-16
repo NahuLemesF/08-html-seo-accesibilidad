@@ -6,6 +6,15 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
   font-family: "Poppins", serif;
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }

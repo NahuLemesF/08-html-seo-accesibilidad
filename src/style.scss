@@ -2,9 +2,12 @@
 @use './variables.scss' as variables;
 
 .handle-scroll {
+    @include variables.container(center);
     height: 100vh;
+    flex-direction: column;
+    scroll-snap-align: start;
 }
-
+    
 .header{
     @include variables.container(space-between);
     padding: 20px;
@@ -110,7 +113,95 @@
         }
     }
 }
+  
+.container {
+    width: 1470px;
+    height: calc(100% - 6.5%);
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    
+    &__video {
+        width: 100%;
+        position: absolute;
+        top: -70px;
+        object-fit: cover;
+        z-index: -1;
+    }
 
+    &__content {
+        flex-direction: column;
+        height: 100%;
+        padding: 80px;
+    }
+
+    &__title {
+        font-size: 67px;
+        font-weight: 700;
+        
+        &--white {
+            color: white;
+        } 
+
+        &--black {
+            color: black;
+        }
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 500;
+        color: white;
+        margin-bottom: 40px;
+        width: 50%;
+        text-wrap: pretty;
+    }
+
+    &__button {
+        background-color: #f4f4f5;
+        color: black;
+        padding: 15px 25px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #e4e4e5;
+            transition: 0.3s;
+        }
+    }
+
+    &__download {
+        @include variables.container(center);
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 80px;
+
+        
+        img {
+            width: 175px;
+
+            &:hover {
+                transition: 0.3s;
+                box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        p {
+            font-size: 19px;
+            font-weight: 500;
+            color: white;
+            padding: 20px 0;
+
+        }
+
+        div {
+            display: flex;
+            gap: 15px;
+        }
+    }
+}	
 
 
 .shake-vertical {
@@ -125,4 +216,3 @@
       transform: translateY(-4px); 
     }
   }
-  
