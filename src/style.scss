@@ -138,6 +138,7 @@
     &__title {
         font-size: 67px;
         font-weight: 700;
+
         
         &--white {
             color: white;
@@ -145,6 +146,8 @@
 
         &--black {
             color: black;
+            display: flex;
+            flex-direction: column;    
         }
     }
 
@@ -155,6 +158,24 @@
         margin-bottom: 40px;
         width: 50%;
         text-wrap: pretty;
+
+        &--white {
+            color: white;
+        } 
+
+        &--black {
+            color: black;
+        }
+
+        &--gray {
+            width: 45%;
+            color: variables.$gray;
+        }
+    }
+
+    &__buttons {
+        @include variables.container-gap(10px);
+        margin-top: 40px;
     }
 
     &__button {
@@ -165,11 +186,25 @@
         font-size: 15px;
         font-weight: 500;
         text-decoration: none;
-
+        
         &:hover {
             background-color: #e4e4e5;
             transition: 0.3s;
         }
+
+        &--black {
+            padding: 12px 20px;
+            background-color: black;
+            color: white;
+        }
+
+        &--no-color {
+            padding: 12px 20px;
+            background-color: transparent;
+            color: variables.$gray;
+            border: 1px solid variables.$gray;
+        }
+
     }
 
     &__download {
