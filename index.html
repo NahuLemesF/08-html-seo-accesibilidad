@@ -29,11 +29,10 @@
 
 <body>
 
-  <main>
-    <div class="handle-scroll">
+    <div class="handle-scroll" aria-label="Main sections">
 
-      <header class="header">
-        <nav>
+      <header class="header" role="header">
+        <nav aria-label="Main navigation">
           <menu class="menu">
             <li class="menu__item">
               <a href="#" aria-label="Go to home">
@@ -70,14 +69,14 @@
           </menu>
         </nav>
 
-        <div class="header__actions">
-          <a href="#" class="header__link">For Creators</a>
-          <a href="#" class="header__button">Contact us</a>
-          <a href="#">
-            <i>
+        <div class="header__actions" aria-label="Header Actions">
+          <a href="#" class="header__link" aria-label="For Creators">For Creators</a>
+          <a href="#" class="header__button" aria-label="Contact us">Contact us</a>
+          <a href="#" class="header__language-selector" aria-expanded="false" aria-controls="language-menu" role="button" aria-label="Select Language">
+            <i class="header__language--icon" aria-hidden="true">
               <img src="./images/world-icon.svg" alt="#">
             </i>
-            <i>
+            <i class="header__language-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="10" height="10">
                 <path d="M 2 4.5 L 6 8.5 L 10 4.5" fill="none"
                   stroke="var(--token-418da828-2706-4a03-8278-b089c280c66c, rgb(113, 113, 122))" stroke-width="1.5"
@@ -85,12 +84,19 @@
               </svg>
             </i>
           </a>
+          <div id="language-menu" class="header__language-menu" hidden role="menu" aria-label="Language Menu">
+            <ul class="header__language--list">
+              <li class="header__language--item" role="menuitem"><a href="#">English</a></li>
+              <li class="header__language--item" role="menuitem"><a href="#">French</a></li>
+            </ul>
+          </div>
         </div>
 
       </header>
 
+  <main role="main">
 
-      <section class="hero">
+      <section class="hero" role="region" aria-label="Hero Section">
         <div class="hero__content">
           <div>
             <h1 class="hero__title">What's next?</h1>
@@ -100,7 +106,7 @@
           <img src="./images/main-photo.avif" alt="Three photos of people dancing" class="hero__image">
         </div>
 
-        <div class="hero__scroll">
+        <div class="hero__scroll" role="region" aria-label="Scroll Section">
           <small>Scroll</small>
           <div>
             <img src="./images/mouse-icon.svg" alt="Image of a mouse icon">
@@ -113,11 +119,11 @@
     </div>
 
 
-    <div class="handle-scroll">
+    <div class="handle-scroll" role="region" aria-label="Main sections">
 
       <section class="container">
         <div>
-          <video src="./images/phone-video.mp4" autoplay muted loop playsinline class="container__video"></video>
+          <video src="./images/phone-video.mp4" autoplay muted loop playsinline class="container__video" aria-hidden="true"></video>
         </div>
 
         <div class="container__content">
@@ -127,9 +133,9 @@
             Winamp aggregates the complete user need for their audio experience and offers features that help create a
             personal experience.
           </h2>
-          <a href="#" class="container__button container__button--white">Learn More</a>
+          <a href="#" class="container__button container__button--white" aria-label="Learn More">Learn More</a>
 
-          <div class="container__download">
+          <div class="container__download" role="region" aria-label="Download Section">
             <div class="container__download--buttons">
               <a href="#"><img src="./images/download-iphone-btn.avif" alt="Download on the App Store"></a>
               <a href="#"><img src="./images/download-google-btn.avif" alt="Get it on Google Play"></a>
@@ -147,12 +153,12 @@
 
     </div>
 
-    <div class="handle-scroll">
+    <div class="handle-scroll" role="region" aria-label="Main sections">
 
       <section class="container">
         <div>
           <video src="./images/macbook-video.mp4" autoplay muted loop playsinline
-            class="container__video container__video--macbook"></video>
+            class="container__video container__video--macbook" aria-hidden="true"></video>
         </div>
 
         <div class="container__content">
@@ -173,20 +179,21 @@
     </div>
 
 
-    <div class="handle-scroll">
+    <div class="handle-scroll" aria-label="Main sections">
       <section class="section">
         <div class="section__container">
           <a href="#" class="section__container--wrapper" id="section__wrapper--studio">
-            <video src="./images/rec-studio.mp4" muted loop width="723px" id="section__video--studio"></video>
+            <video src="./images/rec-studio.mp4" muted loop width="723px" id="section__video--studio" aria-hidden="true"></video>
             <h2 class="section__container--title">Learn more about the music industry</h2>
           </a>
       
           <a href="#" class="section__container--wrapper" id="section__wrapper--hands">
-            <video src="./images/hi-five-video.mp4" muted loop  width="723px" id="section__video--hands"></video>
+            <video src="./images/hi-five-video.mp4" muted loop  width="723px" id="section__video--hands" aria-hidden="true"></video>
             <h2 class="section__container--title">Have any question for the llamas or some ass whippin' feedback</h2>
           </a>
         </div>
       </section>
+  </main>
       
       <footer class="footer">
         <div class="footer__logo">
@@ -243,7 +250,6 @@
       </footer>
     </div>
 
-  </main>
 
   <script type="module" src="./src/main.ts"></script>
 
